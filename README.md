@@ -1,6 +1,8 @@
 <div style="background:white url(//www.html.am/images/backgrounds/background-image-2.gif) repeat fixed;border:1px solid black;width:300px;height:200px;font-size:18px;">welcometo our story</div>
 <div class="wrapper">
- var seconds = 00;
+window.onload = function () {
+
+  var seconds = 00;
   var tens = 00;
   var appendTens = document.getElementById("tens");
   var appendSeconds = document.getElementById("seconds");
@@ -53,4 +55,12 @@
     if (seconds > 9) {
       appendSeconds.innerHTML = seconds;
     }
+
+  }
+
+
+};
+
+
+   
 
