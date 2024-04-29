@@ -1,110 +1,41 @@
 <div class="wrapper">
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Clock</title>
-  </head>
+$color-text: #525252;
+$color-link: #525252;
+$color-link-hover: #525252;
 
-  <style>
-    body {
-      background-color: black;
-      color: #00e2d7;
-      text-align: center;
-      max-width: 400px;
-      padding: 1rem;
-      margin: auto;
-    }
+body {
+  font-family: "ArcadePix",Helvetica,Arial,sans-serif;
+  // Fallback for old browsers
+  background: #16222A;
 
-    .clock {
-      font-size: 4rem;
-    }
+  background: -webkit-linear-gradient(to left, #16222A , #3A6073);
+  background: linear-gradient(to left, #16222A , #3A6073);
+  
+  color: #525252;
+}
 
-    .day,
-    .dayOfWeek {
-      font-size: 1.5rem;
-    }
+a {
+  color: $color-link;
+  
+  &:hover {
+    color: $color-link-hover;
+  }
+}
 
-    .bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2rem;
-    }
-  </style>
-  <body>
-    <div id="clock" class="clock"></div>
-    <div class="bottom">
-      <div id="day" class="day"></div>
-      <div id="dayOfWeek" class="dayOfWeek"></div>
-    </div>
+h1 {
+  text-align: center;
+}
 
-    <script>
-      const showTime = () => {
-        let date = new Date();
-        console.log(date);
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 128px;  
+  font-family: "ArcadePix","ArcadePix",Gadget,sans-serif;
+}
 
-        let weekday = [
-          'Sunday',
-          'Monday',
-          'Tuesday',
-          'Wednesday',
-          'Thursday',
-          'Friday',
-          'Saturday',
-        ];
-
-        let months = [
-          'January',
-          'February',
-          'March',
-          'April',
-          'May',
-          'June',
-          'July',
-          'August',
-          'September',
-          'October',
-          'November',
-          'December',
-        ];
-
-        let h = date.getHours();
-        let m = date.getMinutes();
-        let s = date.getSeconds();
-        let session = 'AM';
-
-        let dayOfWeek = weekday[date.getDay()];
-        let dayOfMonth = date.getDate();
-
-        if (h == 0) {
-          h = 12;
-        }
-
-        if (h > 12) {
-          h = h - 12;
-          session = 'PM';
-        }
-
-        let time = h + ':' + m + ':' + s + ' ' + session;
-
-        document.querySelector('.clock').innerText = time;
-        document.querySelector('.clock').textContent = time;
-
-        document.querySelector('.day').innerHTML =
-          months[date.getMonth()] +
-          ' ' +
-          dayOfMonth +
-          ', ' +
-          date.getFullYear();
-
-        document.querySelector('.dayOfWeek').innerHTML = dayOfWeek;
-        setTimeout(showTime, 1000);
-      };
-
-      showTime();
-    </script>
-  </body>
-</html>
+html, body {
+  margin: 0;
+  height: 100%;
+}
