@@ -68,20 +68,6 @@
       <button id="reset">Reset</button>
     </div>
   </body>
-
-  <script>
-    window.onload = function () {
-      let minutes = 0;
-      let seconds = 0;
-      let tens = 00;
-      let appendMinutes = document.querySelector('#minutes');
-      let appendTens = document.querySelector('#tens');
-      let appendSeconds = document.querySelector('#seconds');
-      let startBtn = document.querySelector('#start');
-      let stopBtn = document.querySelector('#stop');
-      let resetBtn = document.querySelector('#reset');
-      let Interval;
-
       const startTimer = () => {
         tens++;
         if (tens <= 9) {
