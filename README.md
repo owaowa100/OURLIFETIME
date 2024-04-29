@@ -1,45 +1,9 @@
 <div style="background:white url(//www.html.am/images/backgrounds/background-image-2.gif) repeat fixed;border:1px solid black;width:300px;height:200px;font-size:18px;">welcometo our story</div>
-<!DOCTYPE html> 
-<html lang="en"> 
-	
-<head> 
-	<meta charset="UTF-8"> 
-	<meta http-equiv="X-UA-Compatible"
-		content="IE=edge"> 
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0"> 
-	<title>Design Stopwatch using HTML CSS and JavaScript</title> 
-	<link rel="stylesheet" href="style.css"> 
-</head> 
-
-<body> 
-	<div class="container"> 
-		<h1>Geeks For Geeks <br> 
-			Stop Watch</h1> 
-		<div id="time"> 
-			<span class="digit" id="hr"> 
-				00</span> 
-			<span class="txt">Hr</span> 
-			<span class="digit" id="min"> 
-				00</span> 
-			<span class="txt">Min</span> 
-			<span class="digit" id="sec"> 
-				00</span> 
-			<span class="txt">Sec</span> 
-			<span class="digit" id="count"> 
-				00</span> 
-		</div> 
-		<div id="buttons"> 
-			<button class="btn" id="start"> 
-				Start</button> 
-			<button class="btn" id="stop"> 
-				Stop</button> 
-			<button class="btn" id="reset"> 
-				Reset</button> 
-		</div> 
-	</div> 
-
-	<script src="script.js"></script> 
-</body> 
-	
-</html>
+<div class="wrapper">
+<h1>Stopwatch</h1>
+<h2>Vanilla JavaScript Stopwatch</h2>
+<p><span id="seconds">00</span>:<span id="tens">00</span></p>
+<button id="button-start">Start</button>
+<button id="button-stop">Stop</button>
+<button id="button-reset">Reset</button>
+</div> 
