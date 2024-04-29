@@ -1,5 +1,5 @@
 <style>
-  #countdown {
+  </body>#countdown {
     font-size: 36px;
     font-weight: bold;
     color: white;
