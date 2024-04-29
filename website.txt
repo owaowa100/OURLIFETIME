@@ -1,9 +1,3 @@
-</html>"C:\Users\andri\Downloads\welcome-to-our-love-story-sticker.webp"
-
-
-
-
-
 <!DOCTYPE html> 
 <html lang="en"> 
 	
