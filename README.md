@@ -1,24 +1,35 @@
+<style>
+  #countdown {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+  }
+</style>
+
+<p id="countdown"></p>
 
 <script>
-// Countdown Timer
-window.addEventListener('DOMContentLoaded', (event) => {
-    const deadline = new Date('2023-10-01T14:00:00').getTime();
-    
-    setInterval(() => {
-        const now = new Date().getTime();
-        const distance = deadline - now;
+  function updateCountdown() {
+    let startTime = new Date("2023-02-28T15:22:00");
+    const currentTime = new Date();
+    let diffTime = startTime - currentTime;
+    let totalSeconds = diffTime / 1000;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        document.querySelector('#js-timer-days').innerText = days;
-        document.querySelector('#js-timer-hours').innerText = hours;
-        document.querySelector('#js-timer-minutes').innerText = minutes;
-        document.querySelector('#js-timer-seconds').innerText = seconds;
+    while (totalSeconds <= 0) {
+      startTime.setDate(startTime.getDate() + 7);
+      diffTime = startTime - currentTime;
+      totalSeconds = diffTime / 1000;
+    }
 
-    }, 1000);
-});
+    const days = Math.floor(totalSeconds / (24 * 60 * 60));
+    const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+    const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
 
+    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
 </script>
