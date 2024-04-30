@@ -1,9 +1,7 @@
 var timerVar = setInterval(countTimer, 1000);
-
 var totalSeconds = 0;
 function countTimer() {
     ++totalSeconds;
-    
     var hour = Math.floor(totalSeconds / 3600);
     var minute = Math.floor((totalSeconds - hour * 3600) / 60);
     var seconds = totalSeconds - (hour * 3600 + minute * 60);
@@ -13,6 +11,5 @@ function countTimer() {
         minute = "0" + minute;
     if (seconds < 10)
         seconds = "0" + seconds;
-
     document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
 }
