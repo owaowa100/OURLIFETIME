@@ -1,50 +1,28 @@
-import React, { Component } from 'react';
-import {
-    View,
-    Text,
-} from 'react-native';
+<!DOCTYPE html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
 
-export default class CountUp extends Component  {
+<html>
 
-    state = {
-        seconds: null,
-    }
+<head>
+   
+    <title>Timer</title>
+</head>
 
-    get formatedTime() {
-        const { seconds } = this.state;
+<body>   
+   <div id="secondTenthsExample">
+   <span class="hours">0</span><span>:</span><span class="values">00:00:00</span>
 
-        return [
-            pad(parseInt(seconds / 60)),
-            pad(seconds % 60),
-        ].join(':');
-    }
-
-    componentWillMount() {
-        this.setState({ seconds: 0 });
-    }
-
-    componentDidMount() {
-        this.timer = setInterval(
-            () => this.setState({
-                seconds: ++this.state.seconds
-            }),
-            1000
-        );
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timer);
-    }
-
-    render() {
-        return (
-            <View>
-                <Text>{this.formatedTime}</Text>
-            </View>
-        );
-    }
-}
-
-function pad(num) {
-    return num.toString().length > 1 ? num : `0${num}`;
-}
+</div>
+   <!-- You can change from what time it will start counting up, just put in specific time to replace 00. If you want to start from 5 mins up, just put 05 (ex) minutes: 05 -->
+    <script src="easytimer.js"></script>
+    <script>
+        var timer = new Timer();
+        timer.start({precision: 'secondTenths', startValues: {secondTenths: 00, seconds: 00, minutes: 00, hours: 00,}}, );
+        timer.addEventListener('secondTenthsUpdated', function (e) {
+        $('#secondTenthsExample .hours').html(timer.getTotalTimeValues().hours);
+        $('#secondTenthsExample .values').html(timer.getTimeValues().toString(['minutes', 'seconds', 'secondTenths']));
+});            
+    </script>
+</body>
+</html>
