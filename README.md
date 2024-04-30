@@ -1,4 +1,3 @@
-<label id="minutes">00</label>:<label id="seconds">00</label>
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
@@ -18,3 +17,4 @@ function pad(val) {
     return valString;
   }
 }
+<label id="minutes">00</label>:<label id="seconds">00</label>
