@@ -8,12 +8,12 @@
   }
 </style>
 
-<p id="cpuntup"></p>
+<p id="countup"></p>
 
 <script>
   function updateCountup() {
-    let startTime = new Date("2023-02-28T15:22:00");
-    const currentTime = new Date();
+    let startTime = new Date("2023-07-30T20:21:07');
+    const currentTime = new Date(2100-07-30T20:21:07');
     let diffTime = startTime - currentTime;
     let totalSeconds = diffTime / 1000;
 
