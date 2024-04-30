@@ -1,35 +1,31 @@
-<style>
-  </body>#countup {
-    font-size: 98px;
-    font-weight: bold;
-    color: pink;
-    text-align: center;
-    margin: 20px 0;
-  }
-</style>
+   <div class="counter-container">
+        <div class="min-container">
+            <div class="digit-container">
+                <div class="digit-upper min2upper"></div>
+                <div class="digit-lower min2lower"></div>
+            </div>
+            <div class="digit-container">
+                <div class="digit-upper min1upper"></div>
+                <div class="digit-lower min1lower"></div>
+            </div>
+        </div>
 
-<p id="countup"></p>
+        <div class="min-text-container">
+            <span class="unit"> Min </span>
+        </div>
 
-<script>
-  function updateCountup() {
-    let startTime = new Date("2023-07-30T20:21:07');
-    const currentTime = new Date(2100-07-30T20:21:07');
-    let diffTime = startTime - currentTime;
-    let totalSeconds = diffTime / 1000;
+        <div class="sec-container">
+            <div class="digit-container">
+                <div class="digit-upper sec2upper"></div>
+                <div class="digit-lower sec2lower"></div>
+            </div>
+            <div class="digit-container">
+                <div class="digit-upper sec1upper"></div>
+                <div class="digit-lower sec1lower"></div>
+            </div>
+        </div>
 
-    while (totalSeconds <= 0) {
-      startTime.setDate(startTime.getDate() + 7);
-      diffTime = startTime - currentTime;
-      totalSeconds = diffTime / 1000;
-    }
-
-    const days = Math.floor(totalSeconds / (24 * 60 * 60));
-    const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
-    const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
-    const seconds = Math.floor(totalSeconds % 60);
-
-    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  setInterval(updateCountup, 1000);
-</script>
+    <div class="sec-text-container">
+       <span class="unit"> Sec </span>
+    </div>
+</div>
