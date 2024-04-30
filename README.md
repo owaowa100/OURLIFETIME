@@ -1,20 +1,18 @@
-var minutesLabel = document.getElementById("minutes");
-var secondsLabel = document.getElementById("seconds");
+var timerVar = setInterval(countTimer, 1000);
+
 var totalSeconds = 0;
-setInterval(setTime, 1000);
+function countTimer() {
+    ++totalSeconds;
+    
+    var hour = Math.floor(totalSeconds / 3600);
+    var minute = Math.floor((totalSeconds - hour * 3600) / 60);
+    var seconds = totalSeconds - (hour * 3600 + minute * 60);
+    if (hour < 10)
+        hour = "0" + hour;
+    if (minute < 10)
+        minute = "0" + minute;
+    if (seconds < 10)
+        seconds = "0" + seconds;
 
-function setTime() {
-  ++totalSeconds;
-  secondsLabel.innerHTML = pad(totalSeconds % 60);
-  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+    document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
 }
-
-function pad(val) {
-  var valString = val + "";
-  if (valString.length < 2) {
-    return "0" + valString;
-  } else {
-    return valString;
-  }
-}
-<label id="minutes">00</label>:<label id="seconds">00</label>
