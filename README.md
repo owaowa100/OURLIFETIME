@@ -1,31 +1,29 @@
-   <div class="counter-container">
-        <div class="min-container">
-            <div class="digit-container">
-                <div class="digit-upper min2upper"></div>
-                <div class="digit-lower min2lower"></div>
-            </div>
-            <div class="digit-container">
-                <div class="digit-upper min1upper"></div>
-                <div class="digit-lower min1lower"></div>
-            </div>
-        </div>
+<label id="minutes">00</label>
+<label id="colon">:</label>
+<label id="seconds">00</label>
+    <script type="text/javascript">
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
 
-        <div class="min-text-container">
-            <span class="unit"> Min </span>
-        </div>
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        }
 
-        <div class="sec-container">
-            <div class="digit-container">
-                <div class="digit-upper sec2upper"></div>
-                <div class="digit-lower sec2lower"></div>
-            </div>
-            <div class="digit-container">
-                <div class="digit-upper sec1upper"></div>
-                <div class="digit-lower sec1lower"></div>
-            </div>
-        </div>
-
-    <div class="sec-text-container">
-       <span class="unit"> Sec </span>
-    </div>
-</div>
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+    </script>
