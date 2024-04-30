@@ -1,17 +1,17 @@
 <style>
-  </body>#countdown {
-    font-size: 36px;
+  </body>#countup {
+    font-size: 98px;
     font-weight: bold;
-    color: white;
+    color: pink;
     text-align: center;
     margin: 20px 0;
   }
 </style>
 
-<p id="countdown"></p>
+<p id="cpuntup"></p>
 
 <script>
-  function updateCountdown() {
+  function updateCountup() {
     let startTime = new Date("2023-02-28T15:22:00");
     const currentTime = new Date();
     let diffTime = startTime - currentTime;
@@ -31,5 +31,5 @@
     document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 
-  setInterval(updateCountdown, 1000);
+  setInterval(updateCountup, 1000);
 </script>
