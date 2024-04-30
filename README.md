@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
 
@@ -11,7 +10,7 @@
 
 <body>   
    <div id="secondTenthsExample">
-   <span class="hours">0</span><span>:</span><span class="values">00:00:00</span>
+   <span class="hours">0</span><span>:</span><span class="values">243:20::00</span>
 
 </div>
    <!-- You can change from what time it will start counting up, just put in specific time to replace 00. If you want to start from 5 mins up, just put 05 (ex) minutes: 05 -->
