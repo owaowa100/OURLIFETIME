@@ -17,7 +17,7 @@
     <script src="easytimer.js"></script>
     <script>
         var timer = new Timer();
-        timer.start({precision: 'secondTenths', startValues: {secondTenths: 00, seconds: 00, minutes: 00, hours: 00,}}, );
+        timer.start({precision: 'secondTenths', startValues: {secondTenths: 00, seconds: 00, minutes: 00, hours: 00, days: 243}}, );
         timer.addEventListener('secondTenthsUpdated', function (e) {
         $('#secondTenthsExample .hours').html(timer.getTotalTimeValues().hours);
         $('#secondTenthsExample .values').html(timer.getTimeValues().toString(['minutes', 'seconds', 'secondTenths']));
