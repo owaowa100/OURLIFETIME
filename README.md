@@ -1,15 +1,12 @@
-var timerVar = setInterval(countTimer, 1000);
-var totalSeconds = 0;
-function countTimer() {
-    ++totalSeconds;
-    var hour = Math.floor(totalSeconds / 3600);
-    var minute = Math.floor((totalSeconds - hour * 3600) / 60);
-    var seconds = totalSeconds - (hour * 3600 + minute * 60);
-    if (hour < 10)
-        hour = "0" + hour;
-    if (minute < 10)
-        minute = "0" + minute;
-    if (seconds < 10)
-        seconds = "0" + seconds;
-    document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
-}
+<table style="background-color:#FFFFE0;">
+<tr style="background-color:#BDB76B;color:#ffffff;">
+<th>Table Header</th><th>Table Header</th>
+</tr>
+<tr>
+<td>Table cell 1</td><td>Table cell 2</td>
+</tr>
+<tr>
+<td>Table cell 3</td><td style="background-color:#ff0000;">Table cell 4</td>
+</tr>
+</table>
+
