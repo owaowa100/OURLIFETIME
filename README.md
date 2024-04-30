@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<OWAOWA>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@ p {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
+var countDownDate = new Date(" APRIL 29, 2030 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -25,7 +25,7 @@ var x = setInterval(function() {
   var now = new Date().getTime();
     
   // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+  var distance = countUpDate - now;
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
